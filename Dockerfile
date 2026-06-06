@@ -101,4 +101,4 @@ RUN update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-12 10 \
 #    && cmake --build build -j$(($(nproc)-1))
 #
 #WORKDIR /
-#CMD ["./app/build/carlo"]
+#CMD ["./app/build/camera-stream"]

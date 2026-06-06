@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.11)
-project(carlo)
+project(camera-stream)
 
 set(CMAKE_CXX_STANDARD 20)
 list(APPEND CMAKE_PREFIX_PATH "$ENV{HOME}/.local")
@@ -20,5 +20,5 @@ message(STATUS "Found realsense2 at ${realsense2_DIR}")
 
 add_subdirectory(cmake)
 
-add_executable(carlo main.cpp)
-target_link_libraries(carlo PRIVATE ${OpenCV_LIBS}  realsense2::realsense2 nadjieb_mjpeg_streamer::nadjieb_mjpeg_streamer)
+add_executable(camera-stream src/main.cpp)
+target_link_libraries(camera-stream PRIVATE ${OpenCV_LIBS}  realsense2::realsense2 nadjieb_mjpeg_streamer::nadjieb_mjpeg_streamer)

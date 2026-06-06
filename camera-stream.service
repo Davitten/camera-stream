@@ -1,0 +1,13 @@
+[Unit]
+Description=Camera Stream Service
+After=network.target udev.service
+Wants=udev.service
+
+[Service]
+ExecStart=/usr/local/bin/camera-stream
+Restart=always
+RestartSec=20s
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
